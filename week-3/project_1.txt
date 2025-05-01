@@ -1,0 +1,48 @@
+START
+
+INPUT item price
+INPUT quantity
+
+CALCULATE total = price * quantity
+
+OUTPUT total 
+
+INPUT payment
+
+IF payment is enough
+    Give change
+    Say "Thank you"
+ELSE
+    Say "Not enough money"
+
+END
+
+
+[Start]
+   |
+   v
+[Ask for item price]
+   |
+   v
+[Ask for quantity]
+   |
+   v
+[Calculate total = price * quantity]
+   |
+   v
+[Show total]
+   |
+   v
+[Ask for payment]
+   |
+   v
+[Is payment >= total?]
+   |Yes               |No
+   v                  v
+[Give change]     [Say "Not enough money"]
+   |
+   v
+[Say "Thank you"]
+   |
+   v
+[End]
